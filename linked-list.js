@@ -60,6 +60,13 @@ class LinkedList {
       return false;
     }
 
+    if (this.size === 1) {
+      this.head = null;
+      this.tail = null;
+      this.size = 0;
+      return;
+    }
+
     let secondLastElement = this.head;
 
     while (secondLastElement.nextNode !== this.tail) {
@@ -176,7 +183,6 @@ class LinkedList {
 
 const list = new LinkedList();
 
-list.append('dog');
 list.append('cat');
 list.prepend('crow');
 list.prepend('parrot');
