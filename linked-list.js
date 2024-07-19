@@ -41,6 +41,10 @@ class LinkedList {
   }
 
   at(index) {
+    if (index < 0) {
+      return false;
+    }
+
     if (index > this.size - 1) {
       return false;
     }
@@ -120,6 +124,10 @@ class LinkedList {
   }
 
   insertAt(value, index) {
+    if (index < 0) {
+      return false;
+    }
+
     // First/last as edge cases to not manage tail/head later
     if (index >= this.size - 1) {
       // Could return false when index > this.size - 1 but
@@ -151,6 +159,10 @@ class LinkedList {
   }
 
   removeAt(index) {
+    if (index < 0) {
+      return false;
+    }
+
     // First/last as edge cases to not manage tail/head later
     if (index === 0) {
       this.head = this.head.nextNode;
